@@ -36,6 +36,8 @@ const AddUser = (props) => {
     props.onAddUser(enteredName, enteredUserAge);
     //setEnteredUsername("");
     //setEnteredAge("");
+    nameInputRef.current.value = "";
+    ageInputRef.current.value = "";
   };
 
   /* const usernameChangeHandler = (event) => {
@@ -66,7 +68,7 @@ const AddUser = (props) => {
             type="text"
             //value={enteredUsername}
             //onChange={usernameChangeHandler}
-            ref = {nameInputRef}
+            ref={nameInputRef}
           ></input>
 
           <label htmlFor="age">Age (Years)</label>
@@ -75,7 +77,7 @@ const AddUser = (props) => {
             type="number"
             //value={enteredAge}
             //onChange={ageChangeHandler}
-            ref = {ageInputRef}
+            ref={ageInputRef}
           ></input>
           <Button type="submit">Add User</Button>
         </form>
